@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="DataEncryption&SecureCommunication.css">
+        <style type="text/css">
+            .img_deg { float: right; width: 200px;}
+            #h3a { float: right; text-align: center; }
+        </style>
+    </head>
+    <body bgcolor="lightgrey">
+        <h1>Data Encryption and Secure Communication</h1>
+        <h3>Written by Jairus McColumn II</h3>
+        <h3>CSCI-5436G-G: Distributed Web Systems Design</h3>
+        <h3>Dr. Hamza-Lup</h3>
+        <h3>February 10th, 2025</h3>
+
+        <table>
+            <thead>
+                <tr><th>Contents</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Introduction</td></tr>
+                <tr><td>2. Secure Device Authentication (continued)</td></tr>
+                <tr><td>3. Methods of Secure Device Authentication</td></tr>
+                <tr><td>4. Conclusion</td></tr>
+            </tbody>
+        </table>
+
+        <img src="encryption-algorithm-concept-1024x683.jpg" width="600" class="imgMain">
+        <h2 id="h2a">Introduction</h2>
+        <p>Since we have used the internet to execute our daily activities -- from our devices -- the 
+            potential chances of online data being at the adversary's dispoal has increased over the years. 
+            Over the last two chapters, I have explained how security measures, such as device authentication,
+            are needed to be set while using IoT devices. However, it's not only the device that should be
+            protected; but the submission of data into different areas needs layer of protection also. The best
+            example to describe this scenario is when we communicate through email.
+        </p>
+
+        <div class="container">
+            <img src="The-AOL-network-has-the-ability-to-transport-Official-AOL-Mail-Such-messages-cannot-be.png">
+            <img src="sending_compose_LG2.jpg">
+        </div>
+        <div class="text">
+            <p>Figure (a). Email from the 1990s</p>
+            <p>Figure (b). Email in the present day</p>
+        </div>
+
+        <p>Email has been the source of online communication since the late 1980s (became more popular around the 
+            late 1990s to early 2000s). This includes AOL, Microsoft Mail (in 1988), Apple's AppleTalk Networks, and 
+            many more [5]. Figures (a) and (b) illustrate the page of a composed email message from the 1990s and
+            from the present. It has greatly affected the way we can talk to each other; receive notifications from 
+            companies that we had subscribed to and send information, whether it is in document form or audio/video form. 
+            At the time that email started to become the emerging portion of technology, there grew concerns about hackers 
+            attempting to intercept emails during transmission over public networks. Security protocols needed to be 
+            established so that the sender can direct their messages with private information to the receiver, without it 
+            being read by the adversary. The protocol that would be developed to safely and securely send data through online 
+            communication would be from data encryption.
+        </p>
+
+        <p>Data encryption is a reliable solution for protecting data from our devices from being stolen or compromised by malicious
+            attackers. It is one of the crucial elements for secure communication protocols to work efficiently for data transmission. 
+            The process of data encryption involves a plaintext being transformed into a code using an algorithm called a cipher. 
+            The ciphertext is, then, set to be readable by those with a secret key or password [4]. The receiver
+            obtaining the given secret key can decrypt the data back into its original file form [6]. Data encryption comes 
+            in two distinct forms: symmetric encryption and asymmetric encryption. Both types ensure that data can be encrypted and 
+            decrypted as secure as possible; the only difference is that symmetric uses one secret key while asymmetric uses a pair of
+            public and private keys [7]. Looking from a security, flexible and authentication perspective, the asymmetric 
+            encryption is the most preferred choice. Applications, email communications and online bank transactions use asymmetric 
+            encryption because it's more secure and does not require sharing a single secret key [3]. 
+        </p>
+
+        <p>Below, is a short video of how data encryption works and how it is resourceful for transmitting information through
+            public and/or private networks [9].
+        </p>
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/6-JjHa-qLPk?si=qT4-VqfMc_cM7PRw" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p id="h2a">Video 1: Encryption & Public Keys</p>
+
+        <p>Secure communication can be viewed as a process of sending and receiving information in a secure manner, protecting it from 
+            unauthorized access. Secure communication involves the use of encryption and other security mechanisms to ensure that the 
+            user's data is securely transferred between two or more parties. It, also, uses encryption algorithms to scramble data in
+            transmission, making it difficult for adversaries to read the information as it is being sent over the network connection.
+            This involves confidential information such as passwords, credit card numbers, personal and other documents. These sources of
+            information need to be protected, at all times, while transmitting through public networks (internet or wireless) [4]. 
+        </p>
+
+        <h2 id="h2a">Secure Device Authentication (continued)</h2>
+        <p>Encryption and authentication work collaboratively to develop a strategy for a multi-layered defense. Encryption
+            encodes the data that does not give unauthorized users access to read
+            what is found. In this case, encryption acts as the first line of defense; while authentication acts as a secondary
+            layer. The inner workings of authentication can be envisioned as someone who is the controller of encrypted data. 
+            Utilizing the authentication tool can quickly determine who can and cannot have access to that data. By having this
+            dual-layered approach, the risk of data breaches and unauthorized access is significantly reduced. 
+        </p>
+
+        <p>Last week, I discussed how important secure device authentication is and how it has been influential as the quality of IoT
+            devices become advanced over time. Authentication can come in various forms: for example, some companies use security key
+            fobs or cards for the employee to gain access to their accounts to perform day-to-day tasks. Meanwhile, general places like
+            schools and homes use mobile apps to authenticate the device that is logging into an account. In addition, I demonstrated the
+            use of a multi-factor authentication source called DUO mobile, as a security measure for students to safely log into their
+            Georgia Southern portal. (See chapter 2: Secure Device Authentication for more details.)
+        </p>
+
+        <p>Having device authentication measures are very resourceful to prevent malicious attackers from taking advantage. There
+            are many methods that apply to this standard. These methods of device authentication have advantages and disadvantages; 
+            which will be highlighted for the purpose of robust security. There's a source of device authentication that does not 
+            involve the usual password entry; it is regarded as highly favored amongst companies and industries. That source is called 
+            biometric authentication; which one implies that this could be used towards the adversary's advantage. A detailed account
+            of my concerns of this type of authentication will be mentioned in the upcoming sections of this report. With data encryption 
+            supporting compliance, there are industry regulations put in place to protect sensitive data; for example, General Data Protection 
+            Regulation (GDPR) and the Health Insurance Portability and Accountability Act (HIPAA). As revealed in later chapters, these 
+            regulations are utilized as trusted executable environments for the purposes of handling personal identifiable information.
+        </p>
+
+        <h2 id="h2a">Methods of Secure Device Authentication</h2>
+        <p>According to the article from Ahmet Polat, the author lists the best practices for how security can be made stronger than 
+            ever before [2]. Each of the four methods have their own features that limits the risk of data breaches and reduces the 
+            possibility of malware on the device that can disrupt operations.
+        </p>
+
+        <p id="p1">I. Password-Based Secure Authentication</p>
+        <p>With advanced authentication techniques making its way into different forms of technology today,
+            the password-based method seems to be the most widely used methods upon users. This method involves
+            the user entering in a distinct combination of characters (that is manageable to memorize) to verify their
+            identity to gain access.
+        </p>
+
+        <p id="p1">II. Multi-Factor Authentication</p>
+        <p>Multi-Factor Authentication, or MFA, is considered a higher security level than the password-based
+            authentication. This source requires users to complete two or more pieces of evidence, to prove that
+            the device is verified to continue further into the system. These factors fall into three categories
+            depending on what category was utilized from various businesses. The three categories are the following:
+        </p>
+
+        <div class="row">
+            <div class="column"><img src="Password.jpg" width="100%"></div>
+            <div class="column"><img src="SafeID-Enterprise-Front.png" width="100%"></div>
+            <div class="column"><img src="Fingerprint.jpg" width="100%"></div>
+        </div>
+
+        <div class="row">
+            <div class="column"><h4 id="p">1. Something one knows (password or PIN)</h4></div>
+            <div class="column"><h4 id="p">2. Something one has (smartphone or security token)</h4></div>
+            <div class="column"><h4 id="p">3. Something one is (fingerprint or facial recognition)</h4></div>
+        </div>
+
+        <p id="p1">III. Biometric Authentication</p>
+        <p>Biometric Authentication is one of the newer versions of secure authentication. Biometric authentication 
+            relies on some unique characteristics (concrete or practical) to verify a user's identity. Common biometric 
+            methods include:
+        </p>
+
+        <div class="row">
+            <div class="column"><img src="Fingerprint.jpg" width="100%"></div>
+            <div class="column"><img src="Facial recognition.jpg" width="100%"></div>
+            <div class="column"><img src="Voice recognition.jpeg" width="100%"></div>
+        </div>
+
+        <div class="row">
+            <div class="column"><h4 id="p">1. Fingerprint scanning</h4></div>
+            <div class="column"><h4 id="p">2. Facial recognition</h4></div>
+            <div class="column"><h4 id="p">3. Voice recognition</h4></div>
+        </div>
+
+        <div class="container">
+            <img src="iris scanning.jpeg">
+            <img src="Biometrics.jpeg">
+        </div>
+        <div class="text">
+            <p>4. Iris Scanning</p>
+            <p>5. Behavioral biometrics (typing patterns, gait analysis)</p>
+        </div>
+
+        <p id="p1">IV. Token-Based Authentication</p>
+        <p>Token-based authenticatioin involved the use of a physical or digital token to verify a user's identity.
+            This method can take various forms:
+        </p>
+
+        <div class="row">
+            <div class="column"><img src="SafeID-Enterprise-Front.png" width="100%"></div>
+            <div class="column"><img src="Softwaretoken.png" width="100%"></div>
+            <div class="column"><img src="JSONwebtoken.png" width="100%"></div>
+        </div>
+
+        <div class="row">
+            <div class="column"><h4 id="p">1. Hardware Tokens (USB keys, Smart cards)</h4></div>
+            <div class="column"><h4 id="p">2. Software Tokens (Mobile apps generating time-based one-time passwords)</h4></div>
+            <div class="column"><h4 id="p">3. JSON Web Tokens (JWTs) for web applications</h4></div>
+        </div>
+
+        <p>These authentication tools are unique and equip to keep data secure; however, the authentication suggestion that one feels 
+            worried for is the biometric authentication. Having the ability to detect someone's fingerprint, voice, face and typing patterns is
+            concerning. Based on an article from Cursor Insight, Akos Molnar describes how machine learning algorithms can analyze patterns 
+            towards the user's behavior. This includes analyzing the data of someone's handwritten style; a person's 
+            speech pattern and an individual's face [1]. Although studies have shown that biometric authentication is an effective tool, 
+            one feels skeptical about its effectiveness for detecting the user. For example, with facial recognition, the adversary can come up with 
+            sneaky and crafty tactics of cloning the user (to trick the device into believing them). In addition, one implies that figuring
+            out a person's typing patterns seems to be an interesting procedure, yet a challenging task to fulfill. How could an authentication tool 
+            tell the typing patterns of each individual that is using the computer at a given moment? Because of these reasons, one believes that this 
+            method is risky and should be securely equipped, first, where it is safe for the public to use.
+        </p>
+
+        <h2 id="h2a">Conclusion</h2>
+        <p>The utilization of secure authentication and encryption develops a wide-scaled security frameset. Implementing
+            these practices ensure that there's a higher level of protection while the user sends an email and makes online
+            transactions. One feels that as time progresses, the technology that we utilize will change and newer strategies
+            will need to be prioritized. This is where industry regulations -- like General Data Protection Regulation (GDPR) and 
+            Payment Card Industry Data Security Standard (PCI DSS) -- would need to update their legal framework to fit the needs
+            of the advanced features of futuristic electronics. These regulations are in charge of setting the necessary requirements
+            to meet health and safety codes [8]. In future reports, one will discuss in more detail about how industry 
+            standards are implemented with companies specializing in technology, even secure authentication tools. Overall,
+            these secure authentication tools are capable of preventing security threats that occur everyday. 
+        </p>
+
+        <h2 id="h2a">References</h2>
+        <p>[1] A. Molnar, "Biometric authentication part II: Behavioral biometrics", Cursor insight, 
+            https://www.cursorinsight.com/post/1818/biometric-authentication-part-ii-behavioral-biometrics-2#:~:text=Graboxy%20uses%20machine%20learning%20algorithms,profiles%20based%20on%20these%20behaviors (accessed Feb. 10, 2025).
+        </p>
+
+        <p>[2] A. Polat, "What is secure authentication? Methods & Best Practices", Timus Networks, 
+            https://www.timusnetworks.com/the-ultimate-guide-to-secure-authentication-best-practices-for-stronger-security/#:~:text=Secure%20authentication%20is%20a%20process,access%20protected%20data%20or%20systems (accessed Feb. 10, 2025).
+        </p>
+
+        <p>[3] "What is Data Encryption? the ultimate guide", Cloudian, 
+            https://cloudian.com/guides/data-protection/data-encryption-the-ultimate-guide/ (accessed Feb. 10, 2025).
+        </p>
+
+        <p>[4] "What is secure communication?", PrivacySense.net, 
+            https://www.privacysense.net/terms/secure-communication/ (accessed Feb. 10, 2025).
+        </p>
+
+        <p>[5] "The history of email", InMoat, 
+            https://www.inmoat.com/post/the-history-of-email#:~:text=1992,large%20file%20sizes%20of%20attachments (accessed Feb. 10, 2025).
+        </p>
+
+        <p>[6] "What is decryption? definition & meaning", ConnectWise, 
+            https://www.connectwise.com/cybersecurity-center/glossary/decryption-definition#:~:text=Decryption%20is%20the%20process%20of,that%20a%20human%20can%20comprehend (accessed Feb. 10, 2025).
+        </p>
+
+        <p>[7] "Symmetric encryption vs asymmetric encryption: How it works and why it's used", Device Authority, 
+            https://deviceauthority.com/symmetric-encryption-vs-asymmetric-encryption/ (accessed Feb. 10, 2025).
+        </p>
+
+        <p>[8] "Industrial regulation - Overview", ScienceDirect Topics, 
+            https://www.sciencedirect.com/topics/social-sciences/industrial-regulation#:~:text=Industrial%20Regulation%20refers%20to%20the,management%20within%20the%20industrial%20sector (accessed Feb. 10, 2025). 
+        </p>
+
+        <p>[9] M. Epner, "The Internet: Encryption & Public Keys", YouTube, 
+            https://www.youtube.com/watch?v=ZghMPWGXexs (accessed Feb. 10, 2025). 
+        </p>
+    </body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="NetworkSecurityForIoT.css">
+        <style type="text/css">
+            .img_deg { float: right; width: 200px;}
+            #h3a { float: right; text-align: center; }
+        </style>
+    </head>
+    <body bgcolor="lightgrey">
+        <h1>IoT Security Frameworks and Standards</h1>
+        <h3>Written by Jairus McColumn II</h3>
+        <h3>CSCI-5436G-G: Distributed Web Systems Design</h3>
+        <h3>Dr. Hamza-Lup</h3>
+        <h3>February 24th, 2025</h3>
+
+        <table>
+            <thead>
+                <tr><th>Contents</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Introduction</td></tr>
+                <tr><td>2. IoT Network Segmentation</td></tr>
+                <tr><td>3. Firewall Configuration</td></tr>
+                <tr><td>4. Intrusion Detection/Prevention Systems</td></tr>
+                <tr><td>5. Conclusion</td></tr>
+            </tbody>
+        </table>
+
+        <img src="SecureByDesignBlog.png" width="600" class="imgMain">
+        <h2 id="h2a">Introduction</h2>
+        <p>Security is the most important component in the modern digital world. It has been the foundation for 
+            all devices since the advancements in technology began to flourish. Around the 1990s, the idea of using
+             virtual private networks (or VPNs) and cybersecurity software became the central focus once the masses
+              had internet access. When the public was able to communicate through the internet - for instance, to 
+              send email to another individual or a party - there was a growing concern of cyberattacks such as 
+              man-in-the-middle attacks and denial of service (DoS) attacks. These are only some of the concerns that 
+              many people have through network connections while using IoT devices. In the last report titled "Network 
+              Security for IoT", I pinpointed how firmware vulnerabilities can impact the use of IoT devices, if security 
+              measures are not taken consistently. 
+        </p>
+
+        <p>Inside IoT devices, firmware serves as the center of everything, such as ensuring the hardware works well with
+             the software in devices. Looking from a futuristic perspective, as advancements towards technology continue to
+              flourish, more people will utilize them causing more dangerous threats to ensue. To have stronger and productive
+               IoT security frameworks and standards, there are three elements that should be carefully studied. The IoT network 
+               segmentation; firewall configuration and intrusion detection/prevention systems can illustrate how frameworks and 
+               standards are applied. In this report, the objective is to discuss further details about the security framework for 
+               IoT devices, and address the standards that have been established in order for the structure to remain stable overtime. 
+               At the end of this report, the reader will have a better understanding of IoT security frameworks and standards work 
+               collaboratively.
+        </p>
+
+        <h2 id="h2a">IoT Network Segmentation</h2>
+        <p>Since the early 21st century, IoT devices have included the capability to connect a list of devices onto the internet. 
+            Occasionally, there are situations where IoT devices would need to go through a process of network configuration. 
+            This means that settings, controls and policies are established to support the communication between devices and systems 
+            [7]. This measure is applied whenever the device is new to a network either from home or from another source. There are 
+            four distinct configurations that involve networks; this includes router, host, and software configurations and permissions. 
+            Each configuration aims to set up the proper controls, flow operation and security settings to work efficiently through 
+            internet networks [7]. 
+        </p>
+
+        <p>IoT frameworks, alone, cannot solve the issues towards potentially malicious network traffic. Studies have shown that vulnerable 
+            devices and weak infrastructures are becoming easier targets for types of malicious attacks. This includes third party threats 
+            such as ransomware and distributed denial-of-service (DDoS) attacks [11]. For keeping individual devices within their IP boundaries, 
+            network segmentation aims to ease the traffic by dividing the lines of networks into subsections [6]. The IoT network segmentation 
+            is structured to work with security frameworks to solve some fundamental problems. Some of the problems that IoT network 
+            segmentation aims to address are the following [11]:
+        </p>
+
+        <ul id="p">
+            <li>Client isolation for new and existing IoTs that are potentially harmful in the Local Area Network (LAN)</li>
+            <li>Enforces and controls outbound traffic so that adversaries are unable to use IoT to attack remote parties</li>
+            <li>Control of trusted cloud and remote services, interacting with IoT, are increasing</li>
+        </ul>
+
+        <p>The video, that is presented below, explains about network segmentation and how it works well in organizations. 
+            Also, this video dives into how network segmentation works alongside zero-trust policy, to ensure that those, who do 
+            not secure access to the network, cannot go any further [4].
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/ouvqTP3RajU?si=Ea0zTMIU7cKh8svH" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+        picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 1: What is Network Segmentation?</h3>
+
+        <p>Having security frameworks is important because it suits the needs of the public and private sectors. Many industries 
+            rely on network-like industrial internet-of-things (IIoT) segmentation to improve the IoT environment. Recently, there's 
+            a report written by computer scientists and engineers, who have worked closely with network segmentation across connected 
+            IIoT devices. 
+        </p>
+
+        <p>First, their research has shown that IIoT segmentation is a division of local area networks (LANs) and virtual local area 
+            networks (VLANs). These two networks provide a gateway to 1.) reinforce the general security posture and 2.) to be capable of 
+            each segment being independently monitored and managed [10]. With the critical role of technology in the workplace, IIoT 
+            segmentation has been applied in most or nearly all companies. The practical use of IIoT segmentation effectively can ensure 
+            that owners of companies can protect their employees from severe damages like distributed denial-of-service (DDoS) attacks. 
+            This report uncovers the advantages and disadvantages of IIoT segmentation. Some advantages include [10]:
+        </p>
+
+        <ul id="p">
+            <li>Segmentation can restrict devices and their data movement, reducing the chances of any unauthorized access</li>
+            <li>Makes management and securing a wide array of IIoT devices much easier</li>
+            <li>Reduces latency and enhances the network performance by the way of controlling traffic and access</li>
+        </ul>
+
+        <p>Although IIoT segmentation can produce better security results for networks, it does not come without some downsides. 
+            Some of the downsides that come with implementing IIoT segmentation security are the following [10]: 
+        </p>
+
+        <ul id="p">
+            <li>Using IIoT segmentation, with such a large array of networks, can become complex and may require more resources</li>
+            <li>Operational cost will increase due to additional hardware, software and management effort</li>
+            <li>Due to the variety of IIoT devices and systems involved, it raises challenges for already existing security standards 
+                to be integrated into the IIoT environments</li>
+        </ul>
+
+        <p>From these viewpoints, it's important that future IIoT environments are developed to meet the criteria for better network 
+            performance and management. And furthermore, IIoT environments should come with less equipment and better compatibility and 
+            array handling features. 
+        </p>
+
+        <h2 id="h2a">Firewall Configuration</h2>
+        <p>Firewall has been a concept for IoT security frameworks since the evolution of technology took into shape. Firewalls are used 
+            for the purpose of protecting the user's device from unauthorized users to gain digital access. An exemplary principle of 
+            firewalls is the structure of a brick wall - strong, stable and difficult to easily pass through. But, as with other computer 
+            systems, firewalls need network security also, due to the rise of data leakage and cyberattacks making organizations more 
+            vulnerable than ever before [8]. Unprotected firewalls can lead to adversaries prying their way through the device gaining 
+            control and producing malware. Thus, is the reason for why proper firewall configuration must be enacted upon. 
+        </p>
+
+        <p>The following video below describes the fundamental elements of firewalls. We'll see how its structure is used to safeguard 
+            devices by granting or denying permissions from sources such as: IP addresses; domain names; protocols; programs; 
+            ports and keywords [3]. 
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/kDEX1HXybrU?si=ADRfpi2F_trEmVm1" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+        picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 2: What is Firewall?</h3>
+
+        <p>The structural firewall operates the same functions as network firewalls. As explained from the video, network firewalls 
+            work with the administrator assigning permissions for which networks can enter and exit [4]. However, with network firewalls, 
+            the access that comes wirelessly - or from routers - are limited between two security domains and monitors that are logged to 
+            establish connection [5]. Network firewalls can be divided into multiple domains; but, it would involve more demilitarized zones - 
+            such as email, virtual private network and web servers - that needs management [9]. This can become an issue, overtime, as 
+            cyberattackers are getting clever to break through firewalls. Thankfully, there are appropriate actions that can be taken to 
+            secure network firewalls from potential hacks and breaches. Some of these actions include the following [9]:
+        </p>
+
+        <ul id="p">
+            <li>Update firewalls with the latest firmware </li>
+            <li>Delete, disable, or rename default accounts and change default passwords</li>
+            <li>Use unique and secure passwords for accounts created</li>
+            <li>Never use shared user accounts because additional admin accounts will have limited privileges from individual responsibilities</li>
+            <li>Restrict outgoing and incoming network traffic for certain applications or transmission control protocol or TCP</li>
+        </ul>
+
+        <p>With a well configured firewall, there's an enhancement in security; improved network monitoring and regulatory compliance, 
+            that assists an organization comply with data protection regulations [8]. It is additionally noted that penetration testing 
+            and vulnerability scanning are great resources for testing firewall configuration. Ensuring that there's the right amount 
+            of traffic, for networks to safely connect to other devices, means that the firewall configuration is efficient. With these 
+            tests, in case of the test resulting in a failure, a back-up setting can be applied to maintain its [the firewall's] integrity.
+        </p>
+
+        <h2 id="h2a">Intrusion Detection/Prevention Systems</h2>
+        <p>Through the making of security frameworks, systems are needed to ensure that IoT devices are protected from adversaries. The system, 
+            in which a computer system or network is analyzed to find signs of possible threats and vulnerabilities is called intrusion 
+            detection/prevention systems or (IDPS). IDPS is a joint system of intrusion detection system (IDS) and intrusion prevention system 
+            (IPS). IDS and IPS works similarly to automate the detection process; however, IPS can also make attempts to prevent incidents from 
+            being severe. IDPS is used among technologies to perform and detect methodologies [1]. There are several different methods for IDPS 
+            detection: signature-based, anomaly-based, and stateful protocol analysis. The National Institute of Statistics and Technology 
+            provided, in detail, how IDPS detection methods and technologies function, to suit the needs for security frameworks. Each of these 
+            methods are viable sources for detecting errors.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>IDPS Detection Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Signature-Based</th>
+                    <th>The signature-based detection method refers to a system input (also referred to as network traffic) processing 
+                        certain behavioral patterns such as a person's signature. Signature-based detection works to pick apart possible 
+                        signatures that are found to be fraudulent [2]. Because this method is simplistic and has little understanding of 
+                        network/application protocols, it is deemed useless for detecting attacks from a number of angles.</th>
+                </tr>
+                <tr>
+                    <th>Anomaly-Based</th>
+                    <th>The anomaly-based detection is a method that is more effective than the signature-based detection. Anomaly-based 
+                        detection calls functions like monitoring system calls of a process to check for overflow. Moreover, this detection 
+                        method utilizes profiles to detect behavior from users, hosts, network connections or applications [2]. The disadvantage 
+                        of this detection is the production of false positives (or false alarms) from the activity in certain profiles. 
+                        Because of this flawed feature, it makes analyzing the signal of the alert challenging. </th>
+                </tr>
+                <tr>
+                    <th>Stateful Protocol Analysis</th>
+                    <th>With a stateful protocol analysis, the IDPS can detect the state of network, transport and application 
+                        protocols. What sets this method apart from anomaly detection involves a process that compares vendor-developed 
+                        universal profiles [2]. (These profiles are responsible for mentioning the structure of HTTP requests and 
+                        responses.) Stateful protocol analysis determines which protocols are prohibited and which ones are accessible. 
+                        However, due to the requirement of more resources to make this method effective, performing an analysis would be 
+                        difficult to achieve and tracking numerous sessions could cause an overhead [5].</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>There are a selection of IDPS technologies involving network-based, wireless, network behavior analysis (NBA), and host-based scenarios. Although there are 
+            limitations of the technology, each option functions to secure protocols. For example, Wireless IDPS has the ability to detect attacks and misconfigurations 
+            at the wireless local-area-network (WLAN) protocol examining IEEE 802.11 protocol [2]. (The IEEE 802.11 protocol communication involves a wireless endpoint 
+            device and an access point). However, it cannot examine high level communication like IP addresses; generally, it would involve a network-based IDPS to address 
+            an analysis of higher-level communications. Having various forms of IDPS detection and technologies are resourceful for testing the effectiveness of protecting 
+            IoT systems.
+        </p>
+
+        <h2 id="h2a">Conclusion</h2>
+        <p>As revealed in this report, network segmentation, firewalls, and IDPS work together to ensure the safety and security of IoT 
+            devices across networks. Each element - for developing stronger security frameworks and standards - involves extensive 
+            research and testing, which may result in a time-consuming process. But, finding the right tools, based on the architectural 
+            outline of certain IoT devices, can ensure safer frameworks to have better network security. Without structure and protocols, 
+            one believes that IoT devices will not survive the potential vulnerabilities and cyberattacks. With new developments, shaping 
+            the technological landscape, means industries must increase security protocols and regulations. 
+        </p>
+
+        <h2 id="h2a">References</h2>
+        <p>[1] A. Patel, Q. Qassim, and C. Wills, "A survey of intrusion detection and prevention systems", Information Management
+             & Computer Security, vol. 18, no. 4, pp. 277-290, Oct. 2010, doi: 10.1108/09685221011079199.
+        </p>
+
+        <p>[2] K. Scarfone and P. Mell, "Intrusion Detection and Prevention Systems",
+             NIST, 2010. https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=901146
+        </p>
+
+        <p>[3] PowerCert Animated Videos, "What is a Firewall?"", YouTube. Jun. 17, 2019. [Online].
+             Available: https://www.youtube.com/watch?v=kDEX1HXybrU
+        </p>
+
+        <p>[4] NordLayer, "What is Network Segmentation?", YouTube, Mar. 27, 2023. https://youtu.be/ouvqTP3RajU?si=UFCOUpj1nRoqzV70
+        </p>
+
+        <p>[5] A. Silberschatz, P. B. Galvin, and G. Gagne, Operating System Concepts Essentials. Wiley, 2013.
+        </p>
+
+        <p>[6] "What is network segmentation?", Palo Alto Networks.
+             https://www.paloaltonetworks.com/cyberpedia/what-is-network-segmentation#:~:text=Network%20segmentation%20is%20an%20architectural,subnets%20based%20on%20granular%20policies
+        </p>
+
+        <p>[7] "What is network configuration? | Splunk", Splunk.
+             https://www.splunk.com/en_us/blog/learn/network-configuration.html#:~:text=By%20Stephen%20Watts,communication%20among%20devices%20and%20systems
+        </p>
+
+        <p>[8] A. Selke, "The crucial role of firewall configuration in cybersecurity", Our Insights | Plante Moran, Feb. 10, 2025.
+             https://www.plantemoran.com/explore-our-thinking/insight/2025/02/the-crucial-role-of-firewall-configuration-in-cybersecurity
+        </p>
+
+        <p>[9] "What is Firewall Configuration and Why is it Important? | Fortinet", Fortinet.
+             https://www.fortinet.com/resources/cyberglossary/firewall-configuration
+        </p>
+
+        <p>[10] V. V. Baligodugula, A. Ghimire, and F. Amsaad, "An overview of secure network segmentation in connected IIoT environments", 
+            Computing&AI Connect., vol. 1, Aug. 2024, doi: 10.69709/caic.2024.193182.
+        </p>
+
+        <p>[11] "How can IoT network segmentation help secure a IoT framework."
+             https://www.cloudi-fi.com/blog/how-can-iot-network-segmentation-help-set-boundaries-for-a-secure-iot-framework
+        </p>
+    </body>
+</html>

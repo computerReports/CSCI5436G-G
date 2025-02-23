@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="NetworkSecurityForIoT.css">
+        <style type="text/css">
+            .img_deg { float: right; width: 200px;}
+            #h3a { float: right; text-align: center; }
+        </style>
+    </head>
+    <body bgcolor="lightgrey">
+        <h1>Network Security for IoT</h1>
+        <h3>Written by Jairus McColumn II</h3>
+        <h3>CSCI-5436G-G: Distributed Web Systems Design</h3>
+        <h3>Dr. Hamza-Lup</h3>
+        <h3>February 17th, 2025</h3>
+
+        <table>
+            <thead>
+                <tr><th>Contents</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Introduction</td></tr>
+                <tr><td>2. Firmware</td></tr>
+                <tr><td>3. Security Issues Found from IoT Firmware</td></tr>
+                <tr><td>4. Solutions to Handle Firmware Attacks</td></tr>
+                <tr><td>5. Conclusion</td></tr>
+            </tbody>
+        </table>
+
+        <img src="zero-trust-network-security-concept-2899298405.jpeg" width="600" class="imgMain">
+        <h2 id="h2a">Introduction</h2>
+        <p>Every IoT device made -- from cameras to wearable devices -- is designed using a combination of hardware and software tools.
+             As much as it is necessary for the software to program apps and build the interface, this feature cannot work alone. 
+             The hardware is the most essential feature for the devices to function properly, considering the settings made from 
+             the system including modifications and system updates. However, there's a specialized form of "software" that is capable of
+              managing the hardware; which is called firmware.
+
+            In this report, there are several topics that will be covered regarding the purpose of applying network security to firmware
+             development. These topics include the following sections:
+        </p>
+
+        <ul id="p">
+            <li>Discussing firmware and its functions</li>
+            <li>Addressing the security issues that are discovered from firmware in IoT devices</li>
+            <li>Finding solutions to combat attacks against firmware</li>
+        </ul>
+
+        <p>With the new and emerging technologies on the rise, "network security" is needed now more than ever. 
+            Highlighting the vulnerabilities within components of IoT devices have been the central theme of these written reports. 
+            As revealed in a later section is that firmware can produce its own vulnerabilities. The report will pinpoint the fact 
+            that with firmware acting as the bridge between hardware and software of a device, even networks, this calls for security 
+            measures.
+        </p>
+
+        <h2 id="h2a">Firmware</h2>
+        <img src="firmware-vector-icon_923982-737-839396116.jpeg" width="400" class="imgMain">
+        <h3>Figure 1: Concept of Firmware</h3>
+        <p>As stated above, firmware is the software component of hardware in a device; specifically, a lower-level language that aims
+             to control all hardware functions. Firmware functions as a regularly-updated programmable code which can fix troubleshooting
+              problems, add or expand features and make a device compatible with the new updates/feature in technologies [3]. 
+              This combination of firm and software has the potential to grant us the ability to listen to music, use word-processing
+               tools, and browse the internet.
+
+            Below is a 5-minute video discussing the fundamentals of firmware and how it works inside of a device [1].
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/DBW8YRv_83A?si=NuKv5hHkWEtXAO4g" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 1: The Secret Life of Firmware - Everything You Need to Know</h3>
+
+        <p>Even after a loss of power, for a certain amount of time, the device can hold on to its functionality because the
+             firmware is stored in non-volatile memory (such as flash memory or read-only memory) [1]. As discussed from the 
+             video above, there are three types of firmwares: high-level, low-level and subsystem firmware. Each type functions
+              to improve the overall performance of the device. IBM, a company that works closely with firmware technology, 
+              has provided some insight about the inner workings of each group of firmwares [3]. From the higher level, the firmware 
+              can provide instructions to tell the device what to do and how it should interact with other components. However, 
+              updates on the firmware are impossible because of the complexity at this stage. The low-level firmware is a responsible factor 
+              for devices in which the lower-level uses memory that has only one chance of writing capabilities. Afterwards, it can 
+              never be reprogrammed again. Subsystem firmware is a combination of high-level and low-level firmware. Subsystems, also known as 
+              the "embedded system", can complete a task that can be easily updated, yet can be challenging to become adaptable. Based on 
+              the firmware's architecture, these groups must work together to be usable and to store memory. Thanks to the features in 
+              firmware, it causes IoT devices to work efficiently and to become an integral part of our lives.
+        </p>
+
+        <h2 id="h2a">Security Issues Found from IoT Firmware</h2>
+        <img src="IT-Security-2628417030.jpeg" width="400" class="imgMain">
+        <p>With the vulnerabilities that have been discussed in previous reports, firmware has their share also. Just because firmware
+             works to maintain the security of IoT networks does not mean there are no underlying issues found with firmware. There are
+              reasons for why firmware vulnerabilities can happen. Some argue that firmware security risks develop because of lack of 
+              encryption and authentication mechanisms [2]. Others suggest that these problems arise due to coding errors and inherent 
+              design flaws [4]. 
+
+            One must point out that the reasons for firmware security issues are valid. Without encryption and authentication, the 
+            firmware is left vulnerable to conditions placed on a device. In addition, should coding errors and inherent design flaws 
+            occur, manufacturers should make the user aware of the faulty system. Firmware needs a strong dual-layer protection mechanism
+             against tampering. Tampering has become an outlet for adversaries, because once they can get into an unprotected system, 
+             especially one that has been outdated. This is the reason why common attacks, such as Denial-of-Service, data breaches and
+              system takeovers ensue [4]. However, there are solutions to crack down on the attacks that hackers made from the firmware.
+            
+        </p>
+
+        <h2 id="h2a">Solutions to Handle Firmware Attacks</h2>
+        <p>As recorded from Waqas from HackRead, there are some solutions that can combat firmware attacks in the future [2]. 
+            This includes the following:
+        </p>
+        <ul id="p">
+            <li>Using cryptographic signatures</li>
+            <li>Using AI and machine learning to detect firmware threats</li>
+            <li>Better secure boot mechanisms</li>
+            <li>Capturing security exceptions</li>
+            <li>Input validation</li>
+        </ul>
+        <p>Each of these solutions were tailored towards companies, manufacturers and everyday users. For example, using cryptographic
+             signatures protects the company's product from counterfeit updates to be authentic and maintain the integrity of their 
+             business. AI and machine learning is an interesting solution for detecting firmware threats; yet, it can become a reliable
+              source as new technological products are being created. The implementation of AI and machine learning - for detecting 
+              firmware threats - would become the next area of focus for companies and businesses to investigate. And, protocols towards
+               input validation should be updated as soon as possible to prevent further security threats [2].
+        </p>
+
+        <h2 id="h2a">Conclusion</h2>
+        <p>It cannot be denied that firmware works as a significant agent of how our devices function today. Without the firmware, the 
+            hardware and software could not cooperate in an IoT device, causing the device itself to become unusable. But, as revealed 
+            in this report, firmware can be subject to vulnerabilities due to lack of unsuitable properties. While I'm writing this report,
+             there are a plethora of firmware companies and businesses that are working to enhance their current features; along with 
+             complying to the rules and regulations set. As technology develops more advanced features, the need for a stronger firmware
+              is great. 
+        </p>
+
+        <h2 id="h2a">References</h2>
+        <p>[1] Waqas Tech Videos, "The secret life of Firmware: Everything you need to know", YouTube. Jul. 16, 2023. 
+            [Online]. Available: https://www.youtube.com/watch?v=DBW8YRv_83A
+        </p>
+        <p>[2] Waqas, "Firmware security: Identifying risks to implement best cybersecurity practices", Hackread - Latest Cybersecurity,
+             Tech, AI, Crypto & Hacking News, Dec. 16, 2024. 
+             https://hackread.com/firmware-security-identifying-risks-cybersecurity-practices/#:~:text=Key%20security%20risks%20in%20firmware%20development&text=This%20is%20a%20result%20of,devices%20and%20preventing%20potential%20breaches
+        </p>
+        <p>[3] M. Flinders and I. Smalley, "Firmware", IBM, Nov. 25, 2024. https://www.ibm.com/think/topics/firmware
+        </p>
+        <p>[4] S. Brightwood, "The Importance of Secure Firmware Updates in Maintaining System Integrity", ResearchGate, Sep. 2024, 
+            [Online]. Available: https://www.researchgate.net/publication/384687421_The_Importance_of_Secure_Firmware_Updates_in_Maintaining_System_Integrity
+        </p>
+
+    </body>
+</html>
