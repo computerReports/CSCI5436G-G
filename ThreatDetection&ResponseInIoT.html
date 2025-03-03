@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="ThreatDetection&ResponseInIoT.css">
+        <style type="text/css">
+            .img_deg { float: right; width: 200px;}
+            #h3a { float: right; text-align: center; }
+        </style>
+    </head>
+    <body bgcolor="lightgrey">
+        <h1>Threat Detection & Response in IoT</h1>
+        <h3>Written by Jairus McColumn II</h3>
+        <h3>CSCI-5436G-G: Distributed Web Systems Design</h3>
+        <h3>Dr. Hamza-Lup</h3>
+        <h3>March 3rd, 2025</h3>
+
+        <table>
+            <thead>
+                <tr><th>Contents</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Introduction</td></tr>
+                <tr><td>2. ISO/IEC 27030 Standard</td></tr>
+                <tr><td>3. NIST IoT Cybersecurity Framework</td></tr>
+                <tr><td>4. IoT Security Foundation Guidelines</td></tr>
+                <tr><td>5. Conclusion</td></tr>
+            </tbody>
+        </table>
+
+        <img src="th-3450642278.jpeg" width="600" class="imgMain">
+        <h2 id="h2a">Introduction</h2>
+        <p>With continuous evolution of technology, and its functions, threats have become a central issue amongst the general public. 
+            As implied from the report, "IoT Attack Surfaces & Vulnerabilities", IoT devices have a tendency to experience threats if not secured
+            in the most effective way possible. 
+            With this in mind, there's no denying that threats can occur from our devices at any given moment. These attacks are implemented by 
+            the adversary to steal information through IP addresses, URLs or other sources. Because of this phenomenon, organizations, 
+            like the National Institute of Standards and Technology (NIST), that have specialized in cybersecurity - with certain number of 
+            years of research and development - have stepped in to create frameworks to overcome this matter. In the previous report, I discussed how security frameworks are 
+            utilized to protect the devices that we work with in our everyday lives. As inferred from IoT frameworks and standards, solving 
+            security issues are not a straightforward process. The systems that are set in place deal with challenges involving the Internet
+            and direct association with physical objects, as stated from Abdul-Ghani et al. [3]. This report aims to provide further insight with 
+            cybersecurity framework, along with additional structures that make these frameworks run effectively in the present and future. We'll
+            look into the cybersecurity framework from NIST; the ISO/IEC 27030 framework and the guidelines for creating the foundation, to
+            strengthen the IoT's security.
+        </p>
+
+        <p>To begin on the subject of threat detection and response, a video is provided below, providing a crash-course. The video is broken down
+            into four sections: 1.) continuous process; 2.) vulnerabilities; 3.) understanding tactics and 4.) security. Each section discusses how
+            threats are handled step-by-step. This is of a great source that will cover the use of cybersecurity frameworks and guidelines toward
+            the rest of the report [7].
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/aD9A7Gi6ZAI?si=1NNUVHDOUTBkl1oE" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 1: Threat Detection 101</h3>
+
+        <h2 id="h2a">ISO/IEC 27030 Standard</h2>
+        <p>ISO/IEC 27030 was a standard that focused on security guidelines for the Internet of Things (IoT). ISO/IEC 27030 falls under 
+            the ISO/IEC 27000 family, which is recognized for standards regarding information security management. 
+            Each standard in this family works to enable organizations from all sectors and sizes to manage tools such as finances, intellectual
+            property, employee data and entrusted third party information [8]. Details of the family standard are provided from ISO's website;
+            however, ISO/IEC 27030 is no longer on the website. The closest code that was featured on ISO's website was ISO/IEC 27031. 
+            ISO/IEC 27031 focuses on the guidelines for planning, implementation and operation for business
+            continuity readiness [9]. According to another website, it is stated that ISO/IEC 27030 was moved to Committee Draft
+            in 2019 [10]. 
+        </p>
+
+        <p>Although there are not enough sources discussing how the ISO/IEC 27030 standard works, there have been some clues and hints of what the 
+            draft covers. From one source, the standard covers the principle behind IoT and smart cities [11]; while another source from Cesare Gallotti,
+            a consultant in information security from LinkedIn, stated how ISO/IEC 27030 was set as a guideline on "risks, principles and controls
+            for security and privacy controls for IoT" [12]. To summarize, this standard was drafted to set rules for regulating security and privacy management within IoT 
+            devices. So far, it's been almost 6 years since the standard was drafted; possibly, one believes that other standards would enact upon the 
+            same features as ISO/IEC 27030. Although this standard was not finalized, there is a framework that aims to pursue security guidelines 
+            for IoT devices; which is the NIST IoT Cybersecurity Framework, designed by the National Institute of Standard and Technology.
+        </p>
+
+        <h2 id="h2a">NIST IoT Cybersecurity Framework</h2>
+        <p>The NIST IoT cybersecurity framework has been utilized for many home and on-the-go devices. The goal of this
+            framework is not to remove the activities that are working well. However, it (NIST framework) aims to complement 
+            the ongoing efforts while working on new areas of focus. According to an article, written by Meg Scotfield, there 
+            are three sections that the NIST cybersecurity framework works to achieve [2]. Details, regarding to each tier and code, 
+            are found from the NIST Cybersecurity Framework (CSF) 2.0 handbook under appendices A and B [5], which is assessible 
+            to the general public. Those three sections include the following:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>NIST's Areas of Focus</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Core</th>
+                    <th>The core of the NIST framework involves five basic functions for prioritizing resources and
+                         promoting cybersecurity awareness. Those five functions are: identification; protection; detection;
+                         response and recover. From the NIST document, it mentions that there are, actually, six functions, the
+                         additional function being govern. Each has their duties to accomplish the subcategories within
+                         the function [5].
+                    </th>
+                </tr>
+                <tr>
+                    <th>Implementation Tiers</th>
+                    <th>Through the implementation tiers, it doesn't show levels of maturity. Yet, it does discuss the
+                        range of risk management practices and provides context for the way organizations view cybersecurity risks [5].
+                         There are four tiers that plays a critical role in this element: partial; risk-informed; repeatable and adaptive.
+                         <ul>
+                            <li>Tier 1: Partial</li>
+                            <p id="p2">The application and prioritization of the cybersecurity risk strategy is managed in an ad hoc manner
+                                and is not based on any objectives or environmental threats. The issue, at this tier, is that there's a limit
+                                to the awareness of cybersecurity risks on the organization level. Usually, the organization will run the risk
+                                management through irregular, case-by-case basis. Furthermore, because it does not have the capabilities to process
+                                cybersecurity information, it involves more time and effort to detect the risks involved with the supplier and their
+                                products and services.
+                            </p>
+                            <li>Tier 2: Risk-Informed</li>
+                            <p id="p2">Although this form is not established for organization-wide policy, management can approve risk management practices.
+                                And, unlike Tier 1, the prioritization of activities and protection comes from organizational risk objectives or 
+                                business requirements. In this tier, awareness of risks are noted on the organizational level; however, not on a larger
+                                scale. As a result, this tier does not consistently execute the necessary response.
+                            </p>
+                            <li>Tier 3: Repeatable</li>
+                            <p id="p2">Tier 3 notes that the risk management practice are approved as policy; in addition, these practices are regularly
+                                checked and updated according to the application process. Cybersecurity information is regularly shared through the
+                                organization; methods can respond effectively to changes allowing personnel to gain the knowledge and skills to fulfill
+                                their job roles.
+                            </p>
+                            <li>Tier 4: Adaptive</li>
+                            <p id="p2">This tier expresses that an organization-wide approach has been achieved to manage these risks and proceed to
+                                determine how to address potential events in the future. Organizations use real-time or near real-time information to act
+                                upon the risks associated with the suppliers and their products and services. Not only is the information shared throughout
+                                the organization, but also to authorized third parties. 
+                            </p>
+                         </ul>
+                     </th>
+                </tr>
+                <tr>
+                    <th>Profile</th>
+                    <th>Organizations work to set goals and objectives through the self-assessment of two states: "As-Is" 
+                        and the desired "To-Be". As inserted from Ren Cahoon, executive consultant of Reynolds Cahoon LLC, stated how "If an
+                        organization is implementing best practices all around, parts cannot fit better in an organization as it would if
+                        the work was done in a warehouse with tons of parts". He added, "It's a question of deciding what are the essential
+                        practices that optimizes and tunes the organization to its highest performance" [2].
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The three elements described above represent how beneficial it is to use the NIST framework. One benefit is the capability
+            of the framework to navigate through the difficult requirements and operational landscape. It makes understanding the inner-workings,
+            to detect and response to any threat, much easier. Another benefit comes from the framework's adaptability throughout a range of
+            businesses and fields. According to Bruce deGrazia, collegiate professor that works closely in cybersecurity, suggests that applying
+            the NIST framework will "become the 'de facto' industry standard" [2]. Overall, applying this structure can go a long way towards
+            handling advanced threats and how to respond expeditiously.
+        </p>
+
+        <h2 id="h2a">IoT Security Foundation Guidelines</h2>
+        <p>With these factors in mind, handling threat detection and response can be executed on its own. It needs a support structure for cybersecurity
+            risk management (CRM) systems to remain stable for an extended period of time. The solution involves having foundation guidelines to ensure that 
+            security methods are legitimate for IoT devices to run securely. According to Mukhadin Beschokov, the author of the IoT Security
+            Foundation guide from Wallarm, describes how this structure "aims to spread enough awareness about IoT security that related risks
+            are in control, detected earlier and damages are on the lower side ... supports best practices and promotes the adoption of the IoT
+            security assurance framework" [6].  
+        </p>
+
+        <p>With the primary goal of the IoT security foundation being to strengthen the security ecosystem, it requires the best practices to
+            achieve the desired outcomes. In the same reference, Beschokov offers some key IoT security recommendations. One recommendation would
+            be to have a robust management governance, which involves a well-trained professional to handle data privacy and product security [6]. 
+            A highly skilled personnel, from an organization, must know the In's and Out's of implementing the essential strategies of building the IoT's 
+            security reputation. Another recommendation is to provide enough attention to network applications and frameworks [6]. Often at times, when security
+            is implemented into IoT devices, only applications are considered. However, the framework should consider all angles; from software applications
+            to network-based apps and interfaces.
+        </p>
+
+        <h2 id="h2a">Conclusion</h2>
+        <p>While the development for advanced IoT security measures are continous, this calls for improvements with
+            handling threats effectively. In this report, it was revealed how foundation guidelines and frameworks - for IoT Security - 
+            are on the mission to detect and respond to threats as soon as it happens (without any delays). One must imply that the process of 
+            developing frameworks and rules, to establish better safety protocols, seem time-consuming. Although this may seem true, organizations 
+            and business/corporations are working to find better methods of implementation. Below, is a video from Trend Micro, a cybersecurity 
+            software company, that discusses what can make threat detection and response more effective not only for the present, but for the 
+            future [4].
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/1Qj4KzF8qjI?si=snqT76tYWP3156xF" title="YouTube video player"
+         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 2: What is needed for effective threat detection and response</h3>
+
+        <p>Now that artifical intelligence (AI) is in our midst, this could lend a hand to solving emerging threats. AI-driven threat detection 
+            works to address the limitations once found from traditional detection methods. This is done by leveraging advanced algorithms and machine learning models 
+            to analyze vast amounts of data and identify anomalies at a high accuracy rate. AI, being the source for machine-learning 
+            algorithms can quickly sort out abnormal patterns, unauthorized access or other indicators of potential threats [1]. AI threat detection 
+            is not limited to these features alone; it perform other tasks also. Some other features
+            that can be achieved through AI threat detection include: the ability to adapt to new and existing attack techniques; the ability to perform real-time 
+            data processing and analyzing; and can work in conjunction with IDS, 
+            firewalls, and security information and event management (SIEM) to provide a comprehensive defense strategy [1]. (In a future report, I will
+            discuss how implementing AI-driven threat detection like this can combat against threats.) In conclusion, these guidelines and principles 
+            are set to find and eliminate threats on the spot, providing a piece of mind to users that work with IoT devices daily.
+        </p>
+
+        <h2 id="h2a">References</h2>
+        <p>[1] H. Liu and H. Rehman, Proactive Cyber defense: Utilizing AI and IoT for early threat detection and cyber risk assessment in future networks. 2021. doi: 10.13140/RG.2.2.18863.14249.
+        </p>
+
+        <p>[2] M. Scofield, "Benefiting from the NIST Cybersecurity Framework", Arma International, 2016. [Online]. Available: https://magazine.arma.org/wp-content/uploads/simple-file-list/2016_02_benefitting_from_NIST_cycbersecurity_framework-Scofield.pdf
+        </p>
+
+        <p>[3] H. A. Abdul-Ghani and D. Konstantas, "A Comprehensive study of security and privacy guidelines, threats, and countermeasures: An IoT Perspective", Journal of Sensor and Actuator Networks, vol. 8, no. 2, p. 22, Apr. 2019, doi: 10.3390/jsan8020022.
+        </p>
+
+        <p>[4] Trend Micro, "What is needed for effective threat detection and response", YouTube. Apr. 27, 2020. [Online]. Available: https://www.youtube.com/watch?v=1Qj4KzF8qjI
+        </p>
+
+        <p>[5] National Institute of Standards and Technology, "The NIST Cybersecurity Framework (CSF) 2.0", report, Feb. 2024. [Online]. Available: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+        </p>
+
+        <p>[6] M. Beschokov, "IoT Security Foundation (IOTSF) - full guide", Wallarm, Jan. 17, 2025. https://www.wallarm.com/what/iot-security-foundation-iotsf
+        </p>
+
+        <p>[7] Nozomi Networks, "Threat Detection 101 (5 basic steps)", YouTube. Jan. 02, 2023. [Online]. Available: https://www.youtube.com/watch?v=aD9A7Gi6ZAI
+        </p>
+
+        <p>[8] "ISO - ISO/IEC 27000 family - Information security management", ISO. https://www.iso.org/standard/iso-iec-27000-family
+        </p>
+
+        <p>[9] "ISO/IEC 27031:2011", ISO. https://www.iso.org/standard/44374.html?browse=tc
+        </p>
+
+        <p>[10] "ISO - TwelveDot". https://twelvedot.com/category/iso/#:~:text=ISO/IEC%2027030%20IoT%20Security%20and%20Privacy%20%E2%80%93,and%20is%20highly%20anticipated%20by%20many%20groups
+        </p>
+
+        <p>[11] "Guidance and Gaps Analysis for European Standardisation Privacy Standards in the Information Security context", Enisa, Dec. 2018. https://pure.uvt.nl/ws/portalfiles/portal/29475827/WP2018_O.1.3.1_Privacy_Standards.pdf
+        </p>
+
+        <p>[12] C. Gallotti, "Status of the ISO/IEC 27xxx standards - April 2019", Jun. 06, 2019. https://www.linkedin.com/pulse/status-isoiec-27xxx-standards-april-2019-cesare-gallotti
+        </p>
+    </body>
+</html>
