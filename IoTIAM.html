@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="IoTIAM.css">
+        <style type="text/css">
+            .img_deg { float: right; width: 200px;}
+            #h3a { float: right; text-align: center; }
+        </style>
+    </head>
+    <body bgcolor="lightgrey">
+        <h1>IoT Device Identity and Access Management (IAM)</h1>
+        <h3>Written by Jairus McColumn II</h3>
+        <h3>CSCI-5436G-G: Distributed Web Systems Design</h3>
+        <h3>Dr. Hamza-Lup</h3>
+        <h3>March 10th, 2025</h3>
+
+        <table>
+            <thead>
+                <tr><th>Contents</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Introduction</td></tr>
+                <tr><td>2. AI & Machine Learning</td></tr>
+                <tr><td>3. IoT Identity and Access Management (IAM)</td></tr>
+                <tr><td>4. How AI and ML Contributes to Anomaly-Based Detection</td></tr>
+                <tr><td>5. How AI and ML Serves in Proactive Threat Mitigation in IoT Ecosystems</td></tr>
+                <tr><td>6. Conclusion</td></tr>
+            </tbody>
+        </table>
+
+        <img src="1000_F_112340342_1GPHkS22BQgBrccgAN1NAR5Oimrzz7er.jpg" width="600" class="imgMain">
+        <h2 id="h2a">Introduction</h2>
+        <p>An emerging issue that has fundamentally affected our IoT usage comes from user identification. Most IoT devices require the identity of the user in 
+            order to grant access to their features. For example, our devices use security measures such as entering passwords, pins and patterns. The most 
+            influential security measure is through facial recognition. Companies like Apple and Samsung have been implementing this feature with their products 
+            for (close to) the past ten years. From an article from Wired, author Julian Chokkattu writes how the incorporation of facial recognition has become 
+            the new method for biometrically "unlocking iPhones and authenticating purchases through face scanning" [1]. 
+        </p>
+
+        <p>It all comes from those who work behind the scenes. Scientists and engineers are constantly working - around the clock - to achieve a better solution 
+            to manage the identity and access of the user from their smart devices. With the rise of AI and machine learning, the technological landscape continues 
+            to grow. From the technical standpoint of AI/ML algorithms, it can perform more functions than the system put in place by chatbots, like ChatGPT. Yet, 
+            as hackers are becoming more ruthless and cunning with implementing cyber threats, AI/ML needs to be trained to combat these impending attacks. In this 
+            report, I will discuss how AI and machine learning plays a role with an IoT's IAM. Moreover, the report will uncover the contributions of both attributes 
+            in anomaly detection and as measures to proactively mitigate threats in the ecosystem.
+        </p>
+
+        <h2 id="h2a">AI & Machine Learning</h2>
+        <p>AI and machine learning have been revolutionary enhancements in our everyday lives. However, AI and machine learning have distinct operation features. 
+            The general definition of AI details as the ability to create new technology can accomplish the features of human beings and beyond [4]. Interestingly, 
+            artificial intelligence was established many years ago. According to historical data, around 400 BCE, the idea of AI was thought of as "automatons" that 
+            can work without human interaction [4]. Overtime, scientists and engineers began to experiment with AI using newfound technology that was being developed 
+            in the 20th century. With the developments of robots and computer machinery, it has created a roadmap for what artificial intelligence could become in 
+            the future. 
+        </p>
+
+        <p>Here's a video that discusses a breakdown of what AI can do, even with ChatGPT [7].
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/Hdd9tcs6Jwk?si=8TQ_GQtTW6fe8rsX" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 1: What is AI? This Is How ChatGPT Works | AI Explained</h3>
+
+
+        <p>This makes AI different from machine learning. According to an article from Columbia Engineering, it considers machine learning as a "pathway" to 
+            artificial intelligence [3]. It further implies that machine learning is about the study involving algorithms that controls how much data is being 
+            processed in a computer system. When one reflects on the term "algorithms", it is present in most applications we use. For example, around 2017, 
+            instead of the traditional timeline from social media apps - being in chronological order - they began to implement algorithms to sort out the posts 
+            that the viewer will see on their timeline [5]. Algorithms would change the way the Internet works and how us, as human beings, react to what we see. 
+            Here's a video that talks about the concept behind machine learning and how it's applied in our everyday lives [6].
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/ukzFI9rgwfU?si=iW3hwyxU_qwFvqB0" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 2: What is Machine Learning?</h3>
+
+        <p>Although AI and machine learning serve different fulfillments, both have been used to create the most unique platforms, where the public can ask 
+            for solutions to their issues. This has led to the development of AI sources like ChatGPT, Microsoft Copilot, etc. These sources are simple to 
+            use so that everyone - young and old - can use their web services. For example, let's take a look at how the ordinary, everyday user works with 
+            ChatGPT to solve a complex problem. 
+        </p>
+
+        <p>Suppose a user wanted to solve a system of equations from the following two equations below. All it takes is for the user to 
+            usually enter a prompt to produce the results in a chronological order. 
+        </p>
+
+        <h3>8x+4y=37</h3>
+        <h3>3x-5y=63</h3>
+        <h3>Equation 1: System of equations</h3>
+
+        <img src="Screenshot 2025-03-07 092759.png" width="600" class="imgMain">
+        <img src="Screenshot 2025-03-07 093003.png" width="600" class="imgMain">
+        <img src="Screenshot 2025-03-07 093029.png" width="600" class="imgMain">
+        <img src="Screenshot 2025-03-07 093203.png" width="600" class="imgMain">
+        <img src="Screenshot 2025-03-07 093237.png" width="600" class="imgMain">
+        <img src="Screenshot 2025-03-07 093256.png" width="600" class="imgMain">
+
+        <p>As shown from the images above, the developers of ChatGPT made their platform user-friendly, that allows the user to enter 
+            a prompt and ChatGPT will send back a response. AI has become so popular, today, that every user from homes, businesses/corporations 
+            and even schools. An article, written by John Villasenor, from Scientific American, states how he encourages his students to use 
+            ChatGPT to write proficient essays. He further inserts how teachers should teach their students to use it ethically and productively, 
+            to drive for enhancement in human creativity in the 21st century [2]. In the general public's perspective, AI is able to detect 
+            humans through a biometrical security called facial recognition, as stated earlier. Therefore, the possibilities of AI and ML - becoming 
+            a driving change towards IoT security - are endless.
+        </p>
+
+        <h2 id="h2a">IoT Identity and Access Management (IAM)</h2>
+        <p>Following up on the previous exploration of IoT security issues, there exists new and emerging threats that place 
+            IoT ecosystems in danger.  In the last report, I discussed how standards, the NIST cybersecurity framework and 
+            foundation guidelines are shaping the technological landscape of IoT devices. In addition to these essential components 
+            that assist with mitigating threats; there's another element that aids with managing 1.) the digital identity of the 
+            user and 2.) access control [8]. The IoT Identity and Access Management (IAM) can handle these factors. Kudelski IoThings 
+            states that IAM ensures that only authorized users can gain access to IoT networks and devices. Having an effective 
+            IAM needs advanced security controls for the purpose of "credibility, integrity and availability of information" [8]. 
+        </p>
+
+        <p>Here's a video, from a YouTube channel called IBM Technology, that discusses - in brief details - the concept and application 
+            of identity and access management [9].
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/aNj36g7fSsU?si=qhyAE9CP0webUsDI" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 3: Identity & Access Management</h3>
+
+        <p>In the next sections, we'll observe how the implementation of AI and ML aims to work, compatibility, with an IoT's IAM.
+        </p>
+
+        <h2 id="h2a">How AI and ML Contributes to Anomaly-Based Detection</h2>
+        <p>A few chapters ago - specifically Chapter 5: IoT Security Frameworks and Standards - I had made mention of anomaly 
+            detection as a type of Intrusion Detection/Prevention System (IDPS). In summary, anomaly-based detection works 
+            to signal the behavior from users, hosts, network connections or applications [11]. In addition, this type of 
+            detection can locate unknown attacks, such as malware and prevent its spread from all computer systems. The 
+            report from Nile Secure suggests that anomaly detection is better for detecting cyberattacks than signature-based 
+            detection, which only gathers signatures from a user. The anomaly detection works to do the following [10]:
+        </p>
+
+        <ul id="p2">
+            <li>Data collection and preprocessing:</li>
+                <ul>Collects data - from network logs, sensor outputs or transactional records - and then cleans 
+                    the data to make it easier for analysis
+                </ul>
+            <li>Feature selection:</li>
+                <ul>Distinguishing dataset attributes that are considered from behavior patterns
+                </ul>
+            <li>Modeling:</li>
+                <ul>Process involving the application of machine learning or statistical algorithms to certain features. 
+                    Based on an organization's objectives and system requirements to complete this approach
+                </ul>
+            <li>Anomaly identification:</li>
+                <ul>Compares against new incoming data; not all anomalies are indicative of a problem but could 
+                    be results of harmless statistical fluctuations
+                </ul>
+            <li>Post-processing:</li>
+                <ul>Anomalies are evaluated and prioritized based on their divergence from normal behavior, potential 
+                    impact and the confidence in the detection. Enables organizations to focus their resources effectively
+                </ul>
+            <li>Interpretation:</li>
+                <ul>The final stage where identified anomalies and their rankings are turned into actionable insights. 
+                    Some may involve further investigations, corrective actions or even system improvements to prevent future anomalies
+                </ul>
+        </ul>
+
+        <p>Although anomaly detection has the ability to call functions to check for overflow, false positives are 
+            produced resulting in challenges with signal alert analysis. In addition to this issue, as described in 
+            the report from Scarfone et. al, it implies how analysts have had trouble with determining what triggered 
+            the alert in the first place [10]. Other issues that surface regarding anomaly-based detection are the 
+            handling of large volumes of data; alleviating the complexity of behavioral patterns and applying implementation 
+            and fine-tuning, to offer a robust mechanism to carefully identify and address anomalies efficiently [11]. These 
+            are drawbacks of anomaly detection when it was first developed. 
+        </p>
+
+        <p>Thankfully, we, now, have AI and machine learning that can detect the behaviors of humans and computers. Because 
+            of this innovation, scientists and engineers are striving to incorporate these elements into this type of detection. 
+            Based on a web article from Nile Secure, AI addresses the complexity of modern network environments [10]. With the 
+            major upgrades that are occurring in IoT ecosystems, traditional solutions for detecting threats are becoming 
+            outdated. With machine learning, it aims to handle the input from the user and bring out the results to detect 
+            structured and/or unstructured patterns and metrics [12]. 
+        </p>
+
+        <h2 id="h2a">How AI and ML Serves in Proactive Threat Mitigation in IoT Ecosystems</h2>
+        <p>In the previous topic, there was a great discussion about how to handle the detection and response of threats. 
+            I implied that there are standards, frameworks (specifically the NIST framework) and guidelines established 
+            to mitigate threats. There's a strong argument that AI can be utilized for early detection and network risk 
+            assessment. In a report by Liu et. al, discusses the upsides for using AI in mitigating network threats and 
+            in handling cyber defense. Also, it offers a comparison between traditional and AI-driven threat detection. 
+            Below, is a table to express the distinct characteristics of the two threat detection methods [13] and how the 
+            authors are convinced that AI is the best route to take.
+        </p>
+
+        <h3>Table 1: Differences between traditional threat detection and AI-driven threat detection</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Traditional Threat Detection</th>
+                    <th>AI-Driven Threat Detection</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Traditional threats rely on predefined signatures and heuristic rules to identify malicious activities:
+                        <ol>
+                            <li>Traditional methods struggle to keep up with the volume and complexity of modern network traffic, leading to delays in detecting and responding to threats</li>
+                            <li>May generate a high number of alerts, many of which are false positives or benign activities mistaken for threats</li>
+                        </ol>
+                    </th>
+                    <th>AI-driven threats address these limitations by leveraging advanced algorithms and machine learning models to analyze vast amounts of data and identify anomalies with high accuracy.
+                        <ol>
+                            <li>Designed to recognize patterns and anomalies within network traffic, system logs, and other data resources leading to an indication of cyber threats</li>
+                            <li>Can process and analyze data in real-time</li>
+                            <li>Can improve their detection capabilities over time thanks to the ability of training on historical data and continuously learning from new information</li>
+                            <li>Analyzes data at high speeds and identifies potential threats as they occur</li>
+                            <li>Enhances the accuracy of threat identification by reducing false positives</li>
+                            <li>Helps security professionals to prioritize their response efforts and allocate resources more effectively</li>
+                            <li>Can adapt to new and evolving attack techniques</li>
+                            <li>Can stay ahead of these developments by continuously learning from new data and adapting their detection algorithms</li>
+                            <li>Adaptability ensures that this system remain effective in identifying and mitigating the latest threats, providing a proactive defense against cyber-attacks</li>
+                            <li>Works in conjunction with IDS, firewalls, and security information and event management (SIEM) to provide a comprehensive defense strategy</li>
+                            <li>AI systems can identify and respond to cyber threats more effectively than traditional methods</li>
+                            <li>Essentially, these systems are used for safeguarding networks and critical infrastructure in an increasingly complex and dynamic cyber threat environment</li>
+                        </ol>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Through AI/ML's capabilities, to precisely analyze large amounts of data in a shorter time period, it's 
+            highly regarded as the most effective tool to identify attacks everywhere. This prevents the rise of false 
+            positives and increases efforts amongst threat response. The role of AI-driven threat detection has become 
+            crucial that many organizations deploy AI for their intelligence mechanism, as stated from an article by the 
+            National Institute of Standards and Technology [14]. Therefore, AI has shown to become the most effective 
+            and powerful source known to man.
+        </p>
+
+        <h2 id="h2a">Conclusion</h2>
+        <p>Although AI and ML are highly operative, there exist areas of improvement that aim to fix emerging problems. 
+            Some noticeable issues and solutions were outlined within the same NIST publication. NIST suggests that the 
+            use of AI in IoT threats can give an opportunity for hackers to learn how to manipulate AI/ML systems [14], 
+            as with every other system that has been established. The organization recognizes this as a large-scale issue 
+            due to the fact that the dependency for collecting/analyzing data falls upon AI/ML tools. Fortunately, there 
+            are a couple of solutions for AI/ML to become the most reliable source for handling IAM [14]. 
+        </p>
+
+        <p>The first solution pinpoints the idea that a solid defense must have a dynamic and responsive system. Another 
+            solution is to standardize data sets to be readily available. This will make the process easier for ML-based 
+            solutions to decipher and analyze data. In one's own opinion, these ideas can be accomplished, if implemented 
+            the right way. Honestly, it may take a couple of months (even years) for organizations to carefully examine 
+            AI/ML systems to catch threats on the spot. In conclusion, by making adjustments to the structure of AI/ML 
+            systems, it will provide the most effective strategies towards IoT's IAM.
+        </p>
+
+        <h2 id="h2a">References</h2>
+        <p>[1] J. Chokkattu, "Polar ID is the Face ID rival for Android phones, and could even beat Apple", WIRED, Feb. 26, 2024. [Online]. 
+            Available: https://www.wired.com/story/metalenz-polar-id-first-look/#:~:text=A%20little%20more%20than%20six,level%20of%20security%20and%20capabilities.
+        </p>
+
+        <p>[2] J. Villasenor, "How ChatGPT can improve education, not threaten it", Scientific American, Feb. 20, 2025. [Online]. 
+            Available: https://www.scientificamerican.com/article/how-chatgpt-can-improve-education-not-threaten-it/
+        </p>
+
+        <p>[3] "Artificial Intelligence (AI) vs. Machine Learning | Columbia AI", CU-CAI, 
+            Oct. 03, 2023. https://ai.engineering.columbia.edu/ai-vs-machine-learning/
+        </p>
+
+        <p>[4] "What is the history of artificial intelligence (AI)?", Tableau. https://www.tableau.com/data-insights/ai/history
+        </p>
+
+        <p>[5] J. Berkowitz, "Hi, it's me from 2 days ago: The death of the chronological internet", Fast Company, 
+            Jun. 18, 2024. https://www.fastcompany.com/91140587/chronological-internet-social-media-algorithm
+        </p>
+
+        <p>[6] Simplilearn, "Machine Learning | What is Machine Learning? | Introduction to Machine Learning | 2024 | SimpliLearn", YouTube. 
+            Sep. 19, 2018. [Online]. Available: https://www.youtube.com/watch?v=ukzFI9rgwfU
+        </p>
+
+        <p>[7] howtoai, "What is AI? This is how ChatGPT works | AI explained", YouTube. 
+            May 14, 2023. [Online]. Available: https://www.youtube.com/watch?v=Hdd9tcs6Jwk
+        </p>
+
+        <p>[8] "IoT Glossary: Identity and Access Management (IAM)." 
+            https://www.kudelski-iot.com/glossary/identity-and-access-management#:~:text=IAM%20helps%20prevent%20unauthorized%20access,integrity%2C%20and%20availability%20of%20information.
+        </p>
+
+        <p>[9] IBM Technology, "Identity & Access Management (IAM)", YouTube. Aug. 24, 2022. [Online]. 
+            Available: https://www.youtube.com/watch?v=aNj36g7fSsU
+        </p>
+
+        <p>[10] "Anomaly detection using AI & Machine Learning | Nile", Nile, 
+            Aug. 08, 2024. https://nilesecure.com/ai-networking/anomaly-detection-ai
+        </p>
+
+        <p>[11] K. Scarfone and P. Mell, "Intrusion Detection and Prevention Systems", NIST, 
+            2010. https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=901146
+        </p>
+
+        <p>[12] C. Quiroz-Vazquez, "Machine learning for anomaly detection", Anomaly detection in machine learning: Finding 
+            outliers for optimization of business functions, 
+            Nov. 25, 2024. https://www.ibm.com/think/topics/machine-learning-for-anomaly-detection
+        </p>
+
+        <p>[13] H. Rehman and H. Liu, "Proactive Cyber Defense: Utilizing AI and IoT for Early Threat Detection and Cyber Risk 
+            Assessment in Future Networks", ResearchGate, Dec. 2021, doi: 10.13140/RG.2.2.18863.14249.
+        </p>
+
+        <p>[14] "IOT SECURITY AND THE ROLE OF AI/ML TO COMBAT EMERGING CYBER THREATS IN CLOUD COMPUTING ENVIRONMENT", Issues in 
+            Information Systems, Jan. 2020, doi: 10.48009/4_iis_2020_253-263.
+        </p>
+
+    </body>
+</html>
