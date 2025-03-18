@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="PrivacyProtectionIoT.css">
+        <style type="text/css">
+            .img_deg { float: right; width: 200px;}
+            #h3a { float: right; text-align: center; }
+        </style>
+    </head>
+    <body bgcolor="lightgrey">
+        <h1>Privacy Protection in IoT</h1>
+        <h3>Written by Jairus McColumn II</h3>
+        <h3>CSCI-5436G-G: Distributed Web Systems Design</h3>
+        <h3>Dr. Hamza-Lup</h3>
+        <h3>March 17th, 2025</h3>
+
+        <table>
+            <thead>
+                <tr><th>Contents</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Introduction</td></tr>
+                <tr><td>2. Role-Based Access Control</td></tr>
+                <tr><td>3. Device Identity Management</td></tr>
+                <tr><td>4. Conclusion</td></tr>
+            </tbody>
+        </table>
+
+        <img src="IoT SAFE.jpeg" width="600" class="imgMain">
+
+        <h2 id="h2a">Introduction</h2>
+        <p>Thus far, security has been the central theme of our dependency towards technology. The last several reports
+             have focused on the idea of IoT devices obtaining greater levels of security from most (or all) angles. 
+             Although tech corporations are developing the next generation of security, there's a lingering issue with 
+             unauthorized access of personal data. Another element that works collaboratively with security in every IoT 
+             device, which is called privacy.  An article, written by Dimitri Shelest, describes privacy protection as 
+             the measure to "safeguard one's data and determine what parties can access their information" [10]. When new 
+             IoT devices are created and placed on the market, the emphasis of security and privacy is not a strong. The 
+             main focus is to ensure that the device is operative for the public to use every feature implemented in their 
+             inventions, from smart cars to smart electronics and appliances. Over the past several years, there's been a 
+             collaborative force that is striving to investigate security/privacy issues, and how to strengthen their 
+             effectiveness. For example, founder and director of Fordham Center for Cybersecurity and professor of Computer Science
+             at Fordham University, Dr. Thaier Hayajneh offers his insight [1] on how his team are investigating the numerious problems 
+             with IoT security and privacy standards.
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/0KPCZhlSUb4?si=DdJcrW_cepe1JHPM" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 1: IoT Security and Privacy Issues</h3>
+
+        <p>Many companies, at the time of the IoT device development, were not aware that hackers could manipulate their way through 
+            these devices. However, once studies had proven that attackers can hack into IoT devices, just as much as mobile devices, 
+            this became a "wake-up call", to say, that changes must be made. Since then, organizations have implemented strategies to 
+            combat privacy attacks. Some of the methods that have been implemented - from which will be discussed in this report - are 
+            role-based access control (RBAC) and device identity management. The goal of this report is to discuss how these two elements 
+            have revolutioned how devices manage data privacy from the user and who can obtain access to their information. We will see 
+            the functionality of each element and the areas that it protects, to ensure that user will have the ability to determine how 
+            they should have their data shared.
+        </p>
+
+        <h2 id="h2a">Role-Based Access Control</h2>
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/4Uya_I_Oxjk?si=HmIXqIGlMJFn_P_q" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 2: Role-Based Access Control (RBAC) Explained: How It Works and When To Use It</h3>
+
+        <p>RBAC, designed for over 20 years, has become a mechanism established that has been proved to be effective and useful for 
+            all forms of technology. The video, above, provides great details of the development of RBAC [2] and the uses of this model 
+            in an IoT device. The RBAC model, as mentioned in the video, is made in this order:  
+        </p>
+
+        <ul id="p2">
+            <li>Managing access starts with having capabilities, for the purpose of controlling data access</li>
+            <li>The next level to capability is permissions. Permissions determine who can have access to the information</li>
+            <li>Then, the permissions will be granted to a role to access certain orders</li>
+            <li>Finally, the user grants the permission based a selected role that an individual or a group is a part of</li>
+        </ul>
+
+        <p id="ol2">Usually, the diagram is set up like this:</p>
+        <p id="ol2">User --> Role --> Permission --> Capability</p>
+
+        <p>In 1999, John Barkley et. al describes the setup of the RBAC model and its technicalities. For example, the RBAC model 
+            was designed as an "alternative to traditional discretionary (DAC) and mandatory access control (MAC)" [4]. Its aim was 
+            to provide more security/privacy protection from all users, not just administrators with predetermined rules and organizational 
+            roles. In addition, the model was constructed in hopes that exploitable security risks [3] are avoidable. RBAC functions as 
+            a relational system where the parent node has the ability to obtain all permissions from the child node [4], based on the hierarchy. 
+            Relationships, involving multiple entities, must be organized in the same order as the RBAC model. For example, let's take a look 
+            at how relationships work with access control.
+        </p>
+
+        <img src="Screenshot 2025-03-18 at 9.20.32 AM.png" width="600" class="imgMain">
+        <h3>Figure 1: UML Diagram</h3>
+
+        <p>Figure 1 above, is an image of a UML diagram, from the excerpt from John Barkley et. al, representing a relationship between the 
+            physician and the patient [4]. In the context of the RBAC model, the "attending-physician" would be considered the user. This is because 
+            the "attending-physician" is capable of granting certain permissions to given roles such as the patient, the attending-physician's 
+            assistant and the consulting physician. From there, the permissions will be granted to that role to obtain access to information. As 
+            shown, in the case of the patient, they has permission to make known the guardian, legal representative, close family member to a relative 
+            and someone to pay for the appointment. 
+        </p>
+
+        <p>That's what makes the RBAC model more effective than the DAC and MAC models. However, as privacy protection for IoT becomes 
+            complex overtime, there arises the challenge of designing effective access control schemas, to capture "security-relevant" 
+            information [6], as stated from Guoping Zhang et. al. In the same report, there have been developments made from other researchers 
+            that aim to serve different points of interest. Below is a table that explains additional access models that follow after the 
+            RBAC model.
+        </p>
+
+        <h3>Table 1: Additional Access Models that reflect from the RBAC Model</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Access Model</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>CWS-RBAC Model</th>
+                    <th>Copes with global services; however, it cannot address the context. Designed by Wonohoesodo
+                    </th>
+                </tr>
+                <tr>
+                    <th>CGRBAC Model</th>
+                    <th>Introduces global roles which are used in the mapping to local roles of other services providers.
+                        Designed by SHEN Haibo and HONG Fan
+                    </th>
+                </tr>
+                <tr>
+                    <th>CERBCA Model</th>
+                    <th>Introduces the concept of environment roles that can be used to capture security relevant context 
+                        of the environment in which access requests are made. Developed by Chun-Dong Wang</th>
+                </tr>
+                <tr>
+                    <th>TLRBAC Model</th>
+                    <th>This model uses temporal-period and spatial-location based entities to constrain the permissions 
+                        of objects. Developed by Hsing-Chung Chen</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Having an RBAC model is crucial for IoT devices to protect the user's data from going directly to an unpermitted 
+            location. As highlighted from Singh et. al, IoT integrates newly-developed technologies and existing internet 
+            infrastructure [5]. With edge and cloud computing services, it's imperative that enhanced IoT devices have higher 
+            performance.
+        </p>
+
+        <h2 id="h2a">Device Identity Management</h2>
+        <p>Along with the RBAC model, device identity management must be issued to every IoT device. From my research chapters 
+            2 and 3, I discussed the need for having secure device authentication and authorization. According to an IEEE article from 
+            Chen et. al, device identity management is noted as "the process of representing and recognizing entities digital 
+            identities in virtual networks" [8]. One would imply that device identity management (IdM) can be added as a component to 
+            authenticate and authorize devices, in addition to operable security. As time marches on, the utilization of traditional IdM systems 
+            are becoming less as new and innovative tools, like blockchain-based, are utilized inside new IoT devices. </p>
+        <p>Blockchain-based 
+            secure IoT system works to identify and register IoT devices in a smart grid. This protocol can take a public dataset and 
+            recognize devices. A study from Sabrina et. al has shown that the performance of this model proved to have an accuracy rate 
+            of over 95% [7]. Having this approach seems to be a viable solution, considering that blockchain-based systems can verify whether
+            or not someone's identity is full-proof and secure. But, one believes that some additional tests can be made to ensure that this 
+            option can withstand the privacy attacks, which can occur at any given moment.
+        </p>
+
+        <h2 id="h2a">Conclusion</h2>
+        <p>In conclusion, as IoT devices continue to evolve, the reoccurring issues regarding the use of devices with networks, such as security and privacy, remains. 
+            These "smart gadgets" need privacy protection just as much as having security. In this scenario, one feature cannot work without the other. As shown in this report, the RBAC model and 
+            device identity management helps to add the extra layer of security/privacy, for the user to safely use a company's technological product.
+            With the new changes that are happening with IoT devices, it is important to have the most secure and compatible methods that aims 
+            to safeguard the user's data. 
+        </p>
+
+        <h2 id="h2a">References</h2>
+        <p>[1]SAIConference, "IoT security and privacy issues", YouTube. Apr. 13, 2019. [Online]. 
+            Available: https://www.youtube.com/watch?v=0KPCZhlSUb4</p>
+
+        <p>[2]Erik Wilde, "Role-Based Access Control (RBAC) Explained: How it works and when to use it", 
+            YouTube. Oct. 21, 2021. [Online]. Available: https://www.youtube.com/watch?v=4Uya_I_Oxjk</p>
+
+        <p>[3]"Discretionary, mandatory, role and rule based access control", Avigilon, 
+            Jan. 29, 2025. https://www.avigilon.com/blog/access-control-models#mandatory-access-control-vs-discretionary-access-control-models</p>
+
+        <p>[4]J. Barkley, K. Beznosov, and J. Uppal, "Supporting relationships in access control using role based access control", ACM, 
+            pp. 55-65, Oct. 1999, doi: 10.1145/319171.319177.</p>
+
+        <p>[5]J. Singh, S. Rani, and V. Kumar, "Role-Based Access Control (RBAC) enabled Secure - ProQuest". 
+            https://www.proquest.com/scholarly-journals/role-based-access-control-rbac-enabled-secure/docview/3108816026/se-2</p>
+
+        <p>[6]G. Zhang and J. Tian, "An extended role based access control model for the Internet of Things", IEEE Conference Publication | 
+            IEEE Xplore, Oct. 01, 2010. https://ieeexplore.ieee.org/abstract/document/5636381/authors#authors</p>
+
+        <p>[7]F. Sabrina, N. Li, and S. Sohail, "A blockchain based secure IoT system using device identity management", Sensors, 
+            vol. 22, no. 19, p. 7535, Oct. 2022, doi: 10.3390/s22197535.</p>
+
+        <p>[8]J. Chen, Y. Liu, and Y. Chai, "An identity management framework for internet of things", IEEE Conference Publication | 
+            IEEE Xplore, Oct. 01, 2015. https://ieeexplore.ieee.org/abstract/document/7349993</p>
+
+        <p>[9]B. Cremonezi, A. B. Vieira, J. Nacif, E. Franco Silva, and M. Nogueira, "Identity Management for Internet of Things: 
+            Concepts, challenges and opportunities", ScienceDirect, May 31, 2024. 
+            https://www.sciencedirect.com/science/article/pii/S0140366424001889</p>
+
+        <p>[10]D. Shelest, "How to protect your privacy online: 15 Essential ways in 2025", Onerep, Jan. 14, 2025. 
+            https://onerep.com/blog/how-to-protect-your-privacy-online</p>
+
+    </body>
+</html>
