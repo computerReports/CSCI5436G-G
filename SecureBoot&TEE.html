@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="SecureBoot&TEE.css">
+        <style type="text/css">
+            .img_deg { float: right; width: 200px;}
+            #h3a { float: right; text-align: center; }
+        </style>
+    </head>
+    <body bgcolor="lightgrey">
+        <h1>Secure Boot & Trusted Execution Environment (TEE)</h1>
+        <h3>Written by Jairus McColumn II</h3>
+        <h3>CSCI-5436G-G: Distributed Web Systems Design</h3>
+        <h3>Dr. Hamza-Lup</h3>
+        <h3>March 24th, 2025</h3>
+
+        <table>
+            <thead>
+                <tr><th>Contents</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1. Introduction</td></tr>
+                <tr><td>2. Secure Boot and Trusted Execution Environment (TEE)</td></tr>
+                <tr><td>3. GDPR and CCPA Compliance</td></tr>
+                <tr><td>4. Personally Identifiable Information (PII)</td></tr>
+                <tr><td>5. Conclusion</td></tr>
+            </tbody>
+        </table>
+
+        <img src="secure-boot-3263580736.jpg" width="600" class="imgMain">
+        <h2 id="h2a">Introduction</h2>
+        <p>Since the inception of networks (that are capable of connecting to various forms of technology), IoT devices 
+            have impacted how we (the consumers) interact with it. Believe it or not, each of us have some form of IoT device, 
+            such as: smart watches, smart TVs, and smart refrigerators. The most common is our smartphones; which can connect 
+            us to a given network (home, or on the go like mobile hotspots). These devices have allowed us to complete everyday 
+            tasks at ease, compared to four decades ago. However, the rise of IoT devices have also raised concern amongst those 
+            who use it on a daily basis. If the device does not have the strongest security  measure, then it becomes more vulnerable. 
+            This can open the door for adversaries to successfully enter their way through a user's device and obtain data, unauthorized. 
+        </p>
+
+        <p>In my report, from Chapter 3, I discussed how data encryption helps with protecting data from being compromised from 
+            unknown users. In addition, an element called "cipher" is used to convert plaintext to ciphertext (from sender to 
+            receiver) through a secret key or password. Although data encryption offers a great source of security, this element 
+            must be supported through compliances like GDPR and CCPA. In this report, I will discuss, in further detail, about 
+            these two compliances and how each one works to ensure that the user's data is private and protected. While ensuring 
+            data integrity and confidentiality is maintained, the IoT device's software needs to be assured that it works on a 
+            platform that can be trusted. So, I will also focus on secure boots, and how having trusted execution environments 
+            (TEEs) aims to make collaborative efforts with the software.
+        </p>
+
+        <h2 id="h2a">Secure Boot and Trusted Execution Environment (TEE)</h2>
+        <p>First, let's examine what secure boot and trusted execution environments (or TEEs) are and how they impact IoT devices. 
+            According to an article from Fiveable, it regards secure boot and TEE as important components for how a computer system 
+            is safely secured. In addition, the article notes how these two elements are 1.) the "foundation of trust" and 2.) 
+            providing isolated environments for "verified software" only to run during "case-sensitive operations" [3]. Each element 
+            has their unique characteristics. For example, secure boots ensure that essential system boot loaders are provided with 
+            cryptographic signatures and secure keys to have the device run functionally whenever "booting" is necessary. The Oracle 
+            states how the UEFI secure boot, specifically, works as a "platform firmware" that can authenticate a digitally signed 
+            UEFI image, such as an "operating system loader or a UEFI driver". It further explains that "third-party UEFI drivers"
+            and "operating system boot loaders" are required to go through the process called BIOS Setup Utility [2]. This system is 
+            a requirement for all manufacturers of these devices, such as Apple, Microsoft, Samsung, etc. These companies will uphold 
+            different standards; but, it should ensure that the device runs without any faults or missteps.
+        </p>
+
+        <p>One would consider TEEs, or trusted execution environments, as an ecosystem. A place where the execution of code contains 
+            higher levels of trust, ignoring threats to the central device altogether [1]. Furthermore, TEEs aim to improve the security 
+            standards within the "trusted" OS as an act of authenticity to the system itself and a chosen platform [2]. TEEs have a 
+            unique architecture that aims to concentrate on having mechanisms and securing the device from all angles, from hardware 
+            to network connections. The table, below, describes the TEE's architecture [3]. 
+        </p>
+
+        <h3>Table 1: Architecture of Trusted Execution Environment</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Isolation and Protection Mechanisms</th>
+                    <th>Hardware-Based Security and Secure Communication</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>TEEs are isolated and focus on securing those designed areas within a processor or 
+                        system-on-chip (SoC)
+                    </th>
+                    <th>Hardware-based isolation and memory protection mechanisms make it extremely difficult for attackers to 
+                        directly access or tamper with code and data within the secure environment
+                    </th>
+                </tr>
+                <tr>
+                    <th>TEEs, also, have isolated memory regions, such as secure and/or encrypted memory. Based on the environment 
+                        selected, it stores the sensitive data and code from the main memory from the system
+                    </th>
+                    <th>Communication from main operating system and TEE happens through a secure monitor or secure world switch 
+                        (channels) for data integrity and confidentiality
+                    </th>
+                </tr>
+                <tr>
+                    <th>Additional security features: secure storage for cryptographic keys, secure clock and timers, secure 
+                        input/output interfaces
+                    </th>
+                    <th>Provides a set of secure APIs and services allowing trusted applications to interact with the secure environment 
+                        & perform sensitive operations
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>One would imply that the architectural outline of this environment is established in a nice and organized fashion; which is 
+            why it's needed today. One can tell that TEEs will remain a contributing factor for all IoT devices. Especially with 
+            emerging devices that have incorporated the use of AI. Through the use of secure boot and TEEs, the user can be guaranteed, 
+            securely, protection against software attacks and data confidentiality and attestation and trust establishment [3].
+        </p>
+
+        <h2 id="h2a">GDPR and CCPA Compliance</h2>
+        <p>Now that we have discussed the "frameworks" for ensuring the appropriate secure boot and software methods, in an environment, 
+            let's examine how data is handled. As stated before, technology data is the most imperative source that the user has at 
+            their disposal. Many unauthorized occurrences - such as data breaches and cyberattacks - have caused many users to raise 
+            an eyebrow over this situation. They want to ensure that their information remains private and only given to trusted parties. 
+            Because of this, organizations have started to develop data security, including compliance. That's where GDPR and CCPA 
+            Compliances come in. Both GDPR and CCPA compliances aid user's data as added layers of protection. However, these compliances 
+            function in different ways. First, let's take a look at the regulations that have been established, using GDPR (or General 
+            Data Protection Regulation) [8].
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/OwEC-PEbG3o?si=EFw5EvVAhtw6bA02" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 1: Getting started with GDPR compliance: Introduction to the GDPR</h3>
+
+        <p>From the video above, Linda Thielova, DPO of OneTrust, emphasized that GDPR is set up for European Union (EU) users to have 
+            "the right to data privacy". In addition, it mentions that the regulation covers 1.) processing activities and 2.) 
+            organizations operating within and outside the EU (processing personal data) [8]. Throughout my research into this topic, 
+            one has discovered that plenty of sources agree with the mentionings of GDPR from the video. However, other sources have 
+            provided much more detail explaining GDPR's inner workings. According to Ben Wolford, the GDPR, effective since May 25th, 
+            2018, was passed to deal with security and privacy issues. 
+        </p>
+
+        <p>In his report, Wolford highlighted eight points from which the GDPR covers [4]: 
+        </p>
+
+        <ul id="p">
+            <li>Data protection principles</li>
+            <li>Accountability</li>
+            <li>Data security</li>
+            <li>Data protection by design and by default</li>
+            <li>When one is allowed to process data</li>
+            <li>Consent</li>
+            <li>Data protection officers</li>
+            <li>Public's privacy rights</li>
+        </ul>
+
+        <p>While these points, from Wolford, are great incentives towards improving the handling of data, another source notes three 
+            principles that GDPR must follow. From an article published on Proofpoint, it notes the three principles as follows [7]: 
+        </p>
+
+        <ul id="p">
+            <li>Transparency: How is the customer's data processed and handled?</li>
+            <li>Proportionality: How much of the data would need to be collected?</li>
+            <li>Legitimate Purpose: Is there a reason for collecting data?</li>
+        </ul>
+
+        <p>By implementing these three principles, it gets to the root of the issue with data privacy, and how having consent to obtain 
+            such information is essential. This has led to the establishment of GDPR compliance requirements. One of those requirements 
+            includes the public's right to switch service locations for their data to remain "intact, protected and private" (shown in 
+            Article 20). And another being that data controllers should be in contact with subjects of processing data (shown in Article 15) 
+            [7]. A company called Aprecomm, recognized for its service towards building a better network [6], is striving to include SOC 2 
+            Certification. The company believes that this will "build upon the company's encryption methods to continue operation at the 
+            highest level of data privacy" [5]. Therefore, companies like Aprecomm, visualizes this as an opportunity to further develop a 
+            stronger trust for users to store their data from IoT devices.
+        </p>
+
+        <iframe class="imgMain" width="560" height="315" src="https://www.youtube.com/embed/Jc3ltgsUn-k?si=MOSwYWz6rtfmlRdG" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Video 2: What is the CCPA? Where does it apply? How do I comply?</h3>
+
+        <p>CCPA, or California Consumer Privacy Act, works similar to GDPR, in terms of requiring businesses to have a privacy policy [11]. 
+            This regulation gives consumers the control over the personal information that businesses collect about them and the CCPA 
+            regulations provide guidance on how to implement the law [9]. According to the video above, the channel DPO Advisor explains 
+            that CCPA features a "12-month look-back period" for companies to respond to consumer's requests for personal information, 
+            in the past 12 months [12]. The CCPA is focused, primarily, on protecting the rights of California consumers. However, it is 
+            not subjected to this area alone; CCPA works for organizations in other countries, so long as they abide by the rules.
+        </p>
+
+        <p>Some companies had found themselves in trouble for not holding up to CCPA's standards. For example, let's take a look at the issue 
+            with Honda's penalty for the user's privacy compliance. In July 2023, Honda, a motor vehicle company, was found responsible for 
+            "requiring consumers to undergo an extensive identity verification process, including for requests where verification is not 
+            permitted under the CCPA", as recorded from Bickford et. al [10]. With Honda breaking CCPA guidelines, this caused CPPA to get 
+            involved with where Honda was wrong in this situation. CPPA, or California Privacy Protection Agency, implied that "Honda's cookie 
+            management platform" was the problem. It involved a two-step process where opting out of advertising cookies were available and 
+            technologies can be tracked while consenting to cookies. As a result, this led to Honda agreeing to pay $632,500 in monetary 
+            penalties and to modify their data privacy practices [10].
+        </p>
+
+        <p>Although GDPR and CCPA compliances operate somewhat differently, both will ensure the privacy of consumer's data is respected. Both 
+            compliances will impose fines to those who don't follow their rules. Those who violate GDPR laws can face up to tens of millions 
+            of euros [4], while those violating CCPA laws will face $25 million (unintended) and $75 million (intended) [12]. 
+        </p>
+
+        <h2 id="h2a">Personally Identifiable Information (PII)</h2>
+        <p>And lastly, the topic I would like to discuss further is personally identifiable information, or PII. This is the source, 
+            in which, compliances like GDPR and CCPA aim to protect the user from malicious attacks. According to Vigderman et. al, PII can 
+            be described as "any information that can identify or trace an individual either directly (using age, SSNs 
+            (social security numbers), email addresses) or when paired with other information (gender, race and birthdate)" [13]. The US 
+            Department of Labor agrees with this definition, noting that PII is "information that can be used to distinguish or trace an 
+            individual's identity, either alone or when combined with other information that is linked or linkable to a specific individual" 
+            [14]. PII has become very influential, in our digital technology, that health departments [15] rely on collecting data from their 
+            patients.
+        </p>
+
+        <p>As we have seen earlier, companies have access to our PIIs. However, looking at this, from a wider perspective, governments, credit 
+            bureaus, and employers have our PIIs as well. It makes sense that businesses and organizations, like these, would have our 
+            information. One would infer that this is the reason as to why the concept of a "digital footprint" must be studied by everyone; 
+            especially those who have social media accounts. However, as time has progressed, hackers have been very clever in terms of 
+            finding ways to maneuver over compliances and obtain the user's PII. Many of those methods include the following [13]: 
+        </p>
+
+        <ul id="p">
+            <li>Brute force</li>
+            <li>Data breaches</li>
+            <li>Man-in-the-Middle attacks</li>
+            <li>Phishing</li>
+            <li>Physical access</li>
+            <li>Programming-based hacking, such as exploiting system vulnerabilities to gain administrative privileges</li>
+        </ul>
+
+        <p>How can our PIIs be protected from our adversaries? Thankfully, the US Department of Labor inserted a step-by-step process for 
+            protection of their employees' PII and other sensitive data. This includes the following [14]:
+        </p>
+
+        <ol id="p">
+            <li>Responsibility goes to the individual to adhere to the rules of behavior defined in applicable Systems Security plans, DOL 
+                and agency guidance</li>
+            <li>DOL contractors should respect the confidentiality of information and refrain from careless or negligent conduct. 
+                Contractors are to avoid gossip and never permit unauthorized record displays in the DOL system of records (only individuals 
+                with a need to know, in their official capacity, are the exception)</li>
+            <li>In addition, contractors must obtain a written approval from management before taking any information away from the 
+                office. Once granted, the employee must adhere to the security policies</li>
+            <li>In the event of theft, contract employees must inform their contract manager ASAP</li>
+            <li>If contract manager is not available, they would need to report the theft or loss to DOL CSIRC team through a specified 
+                email (on their website)</li>
+        </ol>
+
+        <p>This example is only provided from a department standard. However, through GDPR and CCPA guidelines, it is guaranteed that our PII 
+            is safe from attackers that will do their bidding.
+        </p>
+
+        <h2 id="h2a">Conclusion</h2>
+        <p>In summary, we looked at how secure boot and trusted execution environments (or TEEs) operate to safeguard user's information 
+            from outside forces. As established earlier, an important note to take away is that these elements aim to establish trust and 
+            operability amongst verified software. In addition to these features, we examined how the GDPR and CCPA guidelines are put in 
+            place to work in the public's interest. And finally, we talked about the information that is highly regarded as PII and how to 
+            implement the right steps toward prevention against drastic occurrences. As newer technology, geared towards IoT, comes out into 
+            the market, organizations must implement stronger security and privacy regulations. By continuously adapting to new security 
+            practices, all of us can look forward to our data being protected from any threat.
+        </p>
+
+        <h2 id="h2a">References</h2>
+        <p>[1] D. Felton, "What Is Trusted Execution Environment (TEE) & How Does It Work? |", Trustonic, Aug. 19, 2023. https://www.trustonic.com/technical-articles/what-is-a-trusted-execution-environment-tee/
+        </p>
+
+        <p>[2] June2022, "Trusted Execution Technology and UEFI Secure Boot", Oracle Help Center, Jun. 06, 2022. https://docs.oracle.com/en/servers/x86/x9-2/admin-guide/trusted-execution-technology-and-uefi-secure-boot.html
+        </p>
+
+        <p>[3] "15.2 Secure boot and trusted execution environments", Fiveable, Jul. 30, 2024. https://library.fiveable.me/advanced-computer-architecture/unit-15/secure-boot-trusted-execution-environments/study-guide/UgglQey8qhkTo8d1
+        </p>
+
+        <p>[4] B. Wolford, "What is GDPR, the EU's new data protection law?", GDPR.eu, Aug. 29, 2024. https://gdpr.eu/what-is-gdpr/
+        </p>
+
+        <p>[5] Editor, "Aprecomm strengthens data security with GDPR compliance, SOC 2 security certification", Advanced Television, Mar. 18, 2025. https://www.advanced-television.com/2025/03/18/aprecomm-strengthens-data-security-with-gdpr-compliance-soc-2-security-certification/
+        </p>
+
+        <p>[6] Aprecomm Private Limited, "Aprecomm| About Us| Network Intelligence Solution Provider", Aprecomm Private Limited, Nov. 29, 2024. https://aprecomm.ai/about-us/
+        </p>
+
+        <p>[7] "What is GDPR? - Meaning & Compliance Checklist | ProofPoint US", Proofpoint, Mar. 04, 2025. https://www.proofpoint.com/us/threat-reference/gdpr
+        </p>
+
+        <p>[8] OneTrust, "Getting started with GDPR compliance: Introduction to the GDPR", YouTube. Feb. 27, 2024. [Online]. Available: https://www.youtube.com/watch?v=OwEC-PEbG3o
+        </p>
+
+        <p>[9] "California Consumer Privacy Act (CCPA)", State of California - Department of Justice - Office of the Attorney General, Jan. 28, 2025. https://www.oag.ca.gov/privacy/ccpa
+        </p>
+
+        <p>[10] "What Honda's CCPA penalty means for your privacy compliance", JD Supra, Mar. 18, 2025. https://www.jdsupra.com/legalnews/what-honda-s-ccpa-penalty-means-for-1864972/
+        </p>
+
+        <p>[11] R. Juang, "What is CCPA and how to comply", Ironclad, Apr. 11, 2023. https://ironcladapp.com/journal/contract-management/what-is-ccpa/
+        </p>
+
+        <p>[12] DPO Adviser, "What is the CCPA? Where does it apply? How do I comply?", YouTube. Aug. 15, 2019. [Online]. Available: https://www.youtube.com/watch?v=Jc3ltgsUn-k
+        </p>
+
+        <p>[13] A. Vigderman, "What is Personally Identifiable Information (PII)?", Security.org, Feb. 05, 2025. https://www.security.org/identity-theft/what-is-pii/
+        </p>
+
+        <p>[14] "Guidance on the Protection of Personally Identifiable Information (PII)", DOL. https://www.dol.gov/general/ppii
+        </p>
+
+        <p>[15] E. B Begley et al., "Personally identifiable information in state Laws: use, release, and collaboration at health departments", NIH, Aug. 2017. https://pmc.ncbi.nlm.nih.gov/articles/PMC5508150/
+        </p>
+
+    </body>
+</html>
